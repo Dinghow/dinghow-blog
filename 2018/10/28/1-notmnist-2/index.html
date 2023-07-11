@@ -19,7 +19,7 @@
     <meta name="keywords" content="" />
     <meta name="description" content="" />
    	<!-- css -->
-	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/dinghow-blog/css/style.css">
 
 	<!-- favicon -->
 	
@@ -28,23 +28,23 @@
 	
 	<!-- font-awesome -->
 	<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<link rel="stylesheet" href="/css/prism.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+<link rel="stylesheet" href="/dinghow-blog/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/dinghow-blog/css/prism-line-numbers.css" type="text/css"></head>
 	<body>	
 		<!--Preloader-->
 <div id="preloader">
 	<div id="status">
-		<img alt="PRELOADER" src="/img/logo.png">
+		<img alt="PRELOADER" src="/dinghow-blog/img/logo.png">
 	</div>
 </div>
 <!--Preloader end-->
 
 <!-- header -->
 
-	<header id="header-bg-1" style="background-image: url( / );">	
+	<header id="header-bg-1" style="background-image: url( /dinghow-blog/ );">	
 
 	
-		<div id="cd-logo"><a href="/"><img src="/img/loader.gif" data-original="/imgs/logo.png" alt="Logo"></a></div>
+		<div id="cd-logo"><a href="/dinghow-blog/"><img src="/img/loader.gif" data-original="/dinghow-blog/imgs/logo.png" alt="Logo"></a></div>
 	
 	
 	<!-- motto or description -->
@@ -117,23 +117,23 @@
 		<ul>
 			
       		<li class="fa fa-/">	
-           		<a href="/">Home</a>
+           		<a href="/dinghow-blog/">Home</a>
       		</li>
     		
       		<li class="fa fa-/archives">	
-           		<a href="/archives">Archive</a>
+           		<a href="/dinghow-blog/archives">Archive</a>
       		</li>
     		
       		<li class="fa fa-/tags">	
-           		<a href="/tags">Tag</a>
+           		<a href="/dinghow-blog/tags">Tag</a>
       		</li>
     		
       		<li class="fa fa-/about">	
-           		<a href="/about">About</a>
+           		<a href="/dinghow-blog/about">About</a>
       		</li>
     		
       		<li class="fa fa-/friends">	
-           		<a href="/friends">Friend</a>
+           		<a href="/dinghow-blog/friends">Friend</a>
       		</li>
     		
     		
@@ -172,7 +172,7 @@ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
 					
 					
 	
-		<a href="/2018/10/28/1-notmnist-2/" itemprop="url">		
+		<a href="/dinghow-blog/2018/10/28/1-notmnist-2/" itemprop="url">		
 			Solution to 1_notmnist part2		
 		</a>
 	
@@ -182,7 +182,7 @@ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
 				<p class="am-article-meta blog-text-center">
 					<span>
 						<i class="fa fa-clock-o"></i> 
-						<a href="/2018/10/28/1-notmnist-2/" itemprop="url">
+						<a href="/dinghow-blog/2018/10/28/1-notmnist-2/" itemprop="url">
 	<time datetime="2018-10-28T10:00:00.000Z" itemprop="datePublished">
   		2018-10-28
   </time>
@@ -236,7 +236,7 @@ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
           overlap<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> duplicates<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
     <span class="token keyword">return</span> overlap
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<img src="/img/loader.gif" data-original="/2018/10/28/1-notmnist-2/1.jpg" alt="img1" title="img1">
+<img src="/img/loader.gif" data-original="/dinghow-blog/2018/10/28/1-notmnist-2/1.jpg" alt="img1" title="img1">
 <p>We can see the number of overlapping images between sets.</p>
 <h3 id="5-2-Sanitize-the-validation-and-test-set"><a href="#5-2-Sanitize-the-validation-and-test-set" class="headerlink" title="5.2 Sanitize the validation and test set"></a>5.2 Sanitize the validation and test set</h3><p>I just deleted the dulicated image in dataset1 </p>
 <pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">overlap_kick_off</span><span class="token punctuation">(</span>dataset1<span class="token punctuation">,</span> dataset2<span class="token punctuation">,</span> labels1<span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -251,7 +251,7 @@ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
     <span class="token keyword">return</span> np<span class="token punctuation">.</span>delete<span class="token punctuation">(</span>dataset1<span class="token punctuation">,</span> overlap<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> np<span class="token punctuation">.</span>delete<span class="token punctuation">(</span>labels1<span class="token punctuation">,</span> overlap<span class="token punctuation">,</span> None<span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>We can see the shape of the sets:</p>
-<img src="/img/loader.gif" data-original="/2018/10/28/1-notmnist-2/2.jpg" alt="img2" title="img2">
+<img src="/img/loader.gif" data-original="/dinghow-blog/2018/10/28/1-notmnist-2/2.jpg" alt="img2" title="img2">
 <p>Remember to save the sanitized data.</p>
 <h2 id="6-Problem-6"><a href="#6-Problem-6" class="headerlink" title="6. Problem 6"></a>6. Problem 6</h2><blockquote>
 <p>Let’s get an idea of what an off-the-shelf classifier can give you on this data. It’s always good to check that there is something to learn, and that it’s a problem that is not so trivial that a canned solution solves it.</p>
@@ -294,7 +294,7 @@ history <span class="token operator">=</span> model<span class="token punctuatio
                    validation_data <span class="token operator">=</span> <span class="token punctuation">[</span>X_val<span class="token punctuation">,</span> Y_val<span class="token punctuation">]</span><span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>We can see the train process:</p>
-<img src="/img/loader.gif" data-original="/2018/10/28/1-notmnist-2/3.jpg" alt="img3" title="img3">
+<img src="/img/loader.gif" data-original="/dinghow-blog/2018/10/28/1-notmnist-2/3.jpg" alt="img3" title="img3">
 <p>Then we test our model, the accuracy looks good.</p>
 <pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># Evaluate the model</span>
 score <span class="token operator">=</span> model<span class="token punctuation">.</span>evaluate<span class="token punctuation">(</span>X_test<span class="token punctuation">,</span> Y_test<span class="token punctuation">,</span> verbose<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>
@@ -310,14 +310,14 @@ score <span class="token operator">=</span> model<span class="token punctuation"
 		<ul class="am-pagination">
     
     	<li class="am-pagination-prev">
-   		<a class="pull-left" href="/2018/11/22/No-talent/" title="没有才华的人——《樱花庄》&《莉兹与青鸟》">
+   		<a class="pull-left" href="/dinghow-blog/2018/11/22/No-talent/" title="没有才华的人——《樱花庄》&《莉兹与青鸟》">
       		&laquo; Pre post
 		</a>
 		</li>
 	
 	
 		<li class="am-pagination-next">
-		<a class="pull-right" href="/2018/10/27/1-notmnist-1/" title="Solution to 1_notmnist part1">
+		<a class="pull-right" href="/dinghow-blog/2018/10/27/1-notmnist-1/" title="Solution to 1_notmnist part1">
 			Next post &raquo;
 		</a>
 		</li>
@@ -344,7 +344,7 @@ score <span class="token operator">=</span> model<span class="token punctuation"
 
 <!-- gitalk`s css & js -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<link rel="stylesheet" href="/css/comment.css">
+<link rel="stylesheet" href="/dinghow-blog/css/comment.css">
 <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.2/dist/gitalk.min.js"></script>
 
@@ -494,7 +494,7 @@ score <span class="token operator">=</span> model<span class="token punctuation"
 		<!-- <script src="http://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script> -->
 
 <script>
-	window.jQuery || document.write('<script src="/js/jquery-2.1.1.min.js"><\/script>')
+	window.jQuery || document.write('<script src="/dinghow-blog/js/jquery-2.1.1.min.js"><\/script>')
 </script>
 
 <style>
@@ -522,7 +522,7 @@ score <span class="token operator">=</span> model<span class="token punctuation"
 </style>
 
 
-	<script src="/js/motto.js"></script>
+	<script src="/dinghow-blog/js/motto.js"></script>
 	<script type="text/javascript">
 		$(".motto").html(getMingYanContent());
 	</script>	
@@ -549,7 +549,7 @@ score <span class="token operator">=</span> model<span class="token punctuation"
     </div>
 </div>
 
-<script src="/js/ziploader.js"></script>
+<script src="/dinghow-blog/js/ziploader.js"></script>
 
 
   <script type="text/javascript">
@@ -582,7 +582,7 @@ score <span class="token operator">=</span> model<span class="token punctuation"
     }
 
     // get search zip version
-    $.get('/searchVersion.txt?t=' + (+new Date()), function(res) {
+    $.get('/dinghow-blog/searchVersion.txt?t=' + (+new Date()), function(res) {
       if (localStorage.getItem('searchVersion') !== res) {
         localStorage.setItem('searchVersion', res);
         initSearchJson();
@@ -590,7 +590,7 @@ score <span class="token operator">=</span> model<span class="token punctuation"
     });
 
     function initSearchJson () {
-      initLoad(['/search.zip'], {
+      initLoad(['/dinghow-blog/search.zip'], {
         loadOptions: {
           success: function(obj) {
             localStorage.setItem('searchJson', obj['search.json'])
@@ -868,10 +868,10 @@ score <span class="token operator">=</span> model<span class="token punctuation"
 
 
 
-	<script type="text/javascript" src="/js/toc.js"></script>
+	<script type="text/javascript" src="/dinghow-blog/js/toc.js"></script>
 
 
-<script type="text/javascript" src="/js/main.js"></script>
+<script type="text/javascript" src="/dinghow-blog/js/main.js"></script>
 
 <script type="text/javascript">
 	//generate a random img that pre_name 'from 0 to 110'

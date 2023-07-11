@@ -19,7 +19,7 @@
     <meta name="keywords" content="" />
     <meta name="description" content="" />
    	<!-- css -->
-	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/dinghow-blog/css/style.css">
 
 	<!-- favicon -->
 	
@@ -28,23 +28,23 @@
 	
 	<!-- font-awesome -->
 	<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<link rel="stylesheet" href="/css/prism.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+<link rel="stylesheet" href="/dinghow-blog/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/dinghow-blog/css/prism-line-numbers.css" type="text/css"></head>
 	<body>	
 		<!--Preloader-->
 <div id="preloader">
 	<div id="status">
-		<img alt="PRELOADER" src="/img/logo.png">
+		<img alt="PRELOADER" src="/dinghow-blog/img/logo.png">
 	</div>
 </div>
 <!--Preloader end-->
 
 <!-- header -->
 
-	<header id="header-bg-1" style="background-image: url( / );">	
+	<header id="header-bg-1" style="background-image: url( /dinghow-blog/ );">	
 
 	
-		<div id="cd-logo"><a href="/"><img src="/img/loader.gif" data-original="/imgs/logo.png" alt="Logo"></a></div>
+		<div id="cd-logo"><a href="/dinghow-blog/"><img src="/img/loader.gif" data-original="/dinghow-blog/imgs/logo.png" alt="Logo"></a></div>
 	
 	
 	<!-- motto or description -->
@@ -117,23 +117,23 @@
 		<ul>
 			
       		<li class="fa fa-/">	
-           		<a href="/">Home</a>
+           		<a href="/dinghow-blog/">Home</a>
       		</li>
     		
       		<li class="fa fa-/archives">	
-           		<a href="/archives">Archive</a>
+           		<a href="/dinghow-blog/archives">Archive</a>
       		</li>
     		
       		<li class="fa fa-/tags">	
-           		<a href="/tags">Tag</a>
+           		<a href="/dinghow-blog/tags">Tag</a>
       		</li>
     		
       		<li class="fa fa-/about">	
-           		<a href="/about">About</a>
+           		<a href="/dinghow-blog/about">About</a>
       		</li>
     		
       		<li class="fa fa-/friends">	
-           		<a href="/friends">Friend</a>
+           		<a href="/dinghow-blog/friends">Friend</a>
       		</li>
     		
     		
@@ -172,7 +172,7 @@ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
 					
 					
 	
-		<a href="/2019/08/24/object-detection-part1/" itemprop="url">		
+		<a href="/dinghow-blog/2019/08/24/object-detection-part1/" itemprop="url">		
 			Object Detection Review: R-CNN, Fast R-CNN, Faster R-CNN and YOLO		
 		</a>
 	
@@ -182,7 +182,7 @@ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
 				<p class="am-article-meta blog-text-center">
 					<span>
 						<i class="fa fa-clock-o"></i> 
-						<a href="/2019/08/24/object-detection-part1/" itemprop="url">
+						<a href="/dinghow-blog/2019/08/24/object-detection-part1/" itemprop="url">
 	<time datetime="2019-08-24T10:00:00.000Z" itemprop="datePublished">
   		2019-08-24
   </time>
@@ -218,7 +218,7 @@ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
 						<h2 id="1-Abstract"><a href="#1-Abstract" class="headerlink" title="1. Abstract"></a>1. Abstract</h2><p>In this report, firstly, I give an overall review of object detection, then introduce the mainstream deep convolution neural network (DCNN) methods for this topic, including R-CNN[5], Fast R-CNN[4], Faster R-CNN[10] and YOLO[9]. </p>
 <h2 id="2-Overview-of-Object-Detection"><a href="#2-Overview-of-Object-Detection" class="headerlink" title="2. Overview of Object Detection"></a>2. Overview of Object Detection</h2><p>Object detection[2] is a computer technology related to computer vision and image processing that deals with detecting instances of semantic objects of a certain class (such as humans, buildings, or cars) in digital images and videos. Well-researched domains of object detection include face detection and pedestrian detection. The traditional machine learning approaches for objection detection including ViolaJones method based on Harr features, Scale-invariant feature transform (SIFT) and Histogram of oriented gradients (HOG) features. With the fast growth of deep learning, some deep convolution neural network (DCNN) methods were proposed, which performed much better than those traditional ways, these methods can be divided into two groups, the two-stage methods, such as R-CNN and its improvements, and the one-stage methods, such as YOLO and SSD. This report mainly focus on the DCNN methods.</p>
 <h2 id="3-Review-on-Object-Detection-Network"><a href="#3-Review-on-Object-Detection-Network" class="headerlink" title="3. Review on Object Detection Network"></a>3. Review on Object Detection Network</h2><h3 id="3-1-Regions-with-CNN-features-R-CNN"><a href="#3-1-Regions-with-CNN-features-R-CNN" class="headerlink" title="3.1 Regions with CNN features (R-CNN)"></a>3.1 Regions with CNN features (R-CNN)</h3><p>R-CNN[5] is the pionner using DCNN instead of traditional methods for feature extraction on object detection task. The main workflow of R-CNN is propose a number of region of interest (ROI), then using CNN to extract features for support vector machine (SVM) classifier.</p>
-<img src="/img/loader.gif" data-original="/2019/08/24/object-detection-part1/rcnn1.png" alt="rcnn1" title="rcnn1">
+<img src="/img/loader.gif" data-original="/dinghow-blog/2019/08/24/object-detection-part1/rcnn1.png" alt="rcnn1" title="rcnn1">
 <h4 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h4><ol>
 <li>Take an input image:</li>
 <li>Region proposal: one image generates 1K∼2K candidate areas by selective search algorithm[8].</li>
@@ -226,7 +226,7 @@ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
 <li>Classification judgment: the features are sent to SVM classifiers of each class to determine whether they belong to this class or not.</li>
 <li>Position refinement: use regressors to fine-tune candidate box positions</li>
 </ol>
-<img src="/img/loader.gif" data-original="/2019/08/24/object-detection-part1/rcnn2.png" alt="rcnn2" title="rcnn2">
+<img src="/img/loader.gif" data-original="/dinghow-blog/2019/08/24/object-detection-part1/rcnn2.png" alt="rcnn2" title="rcnn2">
 <h4 id="Selective-Search"><a href="#Selective-Search" class="headerlink" title="Selective Search"></a>Selective Search</h4><p>Selective Search[8] is a region proposal algorithm used in object detection. First, segment the input image into 1k∼2k small areas, then group similar regions based on color, texture, size and shape compatibility. The group rules are described as follow.</p>
 <ol>
 <li>Color: select the similar areas based on color histogram</li>
@@ -240,23 +240,23 @@ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
 <p>$$w_* = \arg\min_{\overline{w}_*}\sum_i^N(t_*^i - \overline{w}_*Pooling_5(P^i))^2 + \lambda||\overline{w}_*||^2$$</p>
 <p>Where $*$ is one of ${x,y,h,w}$, $t$ is the target value calculated from ground truth with transfer function above, $Pooling_5$ is the $pool_5$ feature of $P^i$ in CNN, and $w$ is a vector of learnable model parameters. By the way, the $\lambda||w_*||^2$ is a $L_2$ regularization to avoid overfitting and help the optimization.</p>
 <h3 id="3-2-Spatial-Pyramid-Pooling-Network-SPP-Net"><a href="#3-2-Spatial-Pyramid-Pooling-Network-SPP-Net" class="headerlink" title="3.2 Spatial Pyramid Pooling Network (SPP Net)"></a>3.2 Spatial Pyramid Pooling Network (SPP Net)</h3><p>Before introducing Fast R-CNN, we must learn the spatial pyramid pooling (SPP)[6] structure. For R-CNN, we need to use anisotropic scaling to resize different region proposal, and this process may trouble CNN training since some distorted or incomplete regions. To solve this problem, SPP stucture was proposed, it use three kinds of pooling sizes to extract feature with different scales, and using concatenate to combine them.</p>
-<img src="/img/loader.gif" data-original="/2019/08/24/object-detection-part1/spp1.png" alt="spp1" title="spp1">
+<img src="/img/loader.gif" data-original="/dinghow-blog/2019/08/24/object-detection-part1/spp1.png" alt="spp1" title="spp1">
 <p>Fig. shows the detail of SPP structure, the feature map was divided into three sizes 1 ∗ 1, 2 ∗ 2, 4 ∗ 4 for pooling process, then get 1 + 4 + 16 = 21 spatial bins.</p>
 <h3 id="3-3-Fast-R-CNN"><a href="#3-3-Fast-R-CNN" class="headerlink" title="3.3 Fast R-CNN"></a>3.3 Fast R-CNN</h3><p>R-CNN requires a lot of computing resource, since it uses CNN to extract features for each ROI. In fact we can draw lessons from shared weight method, due to the spatial image processing feature of CNN, we can compute the feature map only once, then calculate corresponding ROI on feature map in terms of the input image, that is the main algorithm for Fast R-CNN[4]. Fig.4 shows the structure of Fast R-CNN.</p>
-<img src="/img/loader.gif" data-original="/2019/08/24/object-detection-part1/fast-rcnn1.jpg" alt="fast-rcnn1" title="fast-rcnn1">
+<img src="/img/loader.gif" data-original="/dinghow-blog/2019/08/24/object-detection-part1/fast-rcnn1.jpg" alt="fast-rcnn1" title="fast-rcnn1">
 <h4 id="ROI-Pooling"><a href="#ROI-Pooling" class="headerlink" title="ROI Pooling"></a>ROI Pooling</h4><p>We noted that Fast R-CNN use the same feature maps for different ROI, since convolution doesn’t change the spatial position of image, we can calculate the ROI position on feature map:</p>
 <p>$$Left, Top: \overline{x} = \lfloor x/S \rfloor + 1$$<br>$$Right, Bottom: \overline{x} = \lceil x/S \rceil - 1$$</p>
 <p>Where $S$ is the sum of strides in CNN.</p>
 <p>To standardize the size of different ROI, we used a special SPP structure. Note that the ROI Pooling only use one size $7*7$ for pooling process.</p>
-<img src="/img/loader.gif" data-original="/2019/08/24/object-detection-part1/roi-pooling.png" alt="roi-pooling" title="roi-pooling">
+<img src="/img/loader.gif" data-original="/dinghow-blog/2019/08/24/object-detection-part1/roi-pooling.png" alt="roi-pooling" title="roi-pooling">
 <h4 id="Muti-task-Loss"><a href="#Muti-task-Loss" class="headerlink" title="Muti-task Loss"></a>Muti-task Loss</h4><p>Without using SVM for classification, Fast R-CNN set a muti-task network, one branch for classfication using softmax function, the other branch use linear regression for B-Box refinement. $P(P_0,P_1,…,P_k)$ is the classification output (including background), $t^u = (t^u_x,t^u_y,t^u_w,t^u_h)$ is the B-Box refinement output, we define the loss functions $L_{cls}, L_{loc}$ as follow:</p>
 <p>$$L_{cls}(p,u)=-logp_u$$<br>$$L_{loc}(t^u,v)=\sum_{i\in{x,y,w,h}}smooth_{L_1}(t^u_i-v_i)$$<br>$$smooth_{L_1}(x)= \begin{cases}<br>  0.5x^2&amp;|x|&lt;1\\<br>  |x|-0.5 &amp;\mbox{otherwise}<br>  \end{cases}$$</p>
 <p>Where $u$ is the true class, and $v$ is the ground truth for bounding box.</p>
 <p>Thus the final loss is:<br>$$<br>L_{f-rcnn} = L_{cls} + \lambda L_{loc}<br>$$</p>
 <h3 id="3-4-Faster-R-CNN"><a href="#3-4-Faster-R-CNN" class="headerlink" title="3.4 Faster R-CNN"></a>3.4 Faster R-CNN</h3><p>SPPnet and Fast R-CNN have reduced the running time much than R-CNN, but they still use selective search method to get region proposal, can we get the ROI use neural network too? Faster R-CNN[10] said yes, which proposed a region proposal network (RPN) sharing full-image CNN features with the detection network, and nearly cost-free on this part. </p>
-<img src="/img/loader.gif" data-original="/2019/08/24/object-detection-part1/faster-rcnn1.jpg" alt="faster-rcnn1" title="faster-rcnn1">
+<img src="/img/loader.gif" data-original="/dinghow-blog/2019/08/24/object-detection-part1/faster-rcnn1.jpg" alt="faster-rcnn1" title="faster-rcnn1">
 <h4 id="Region-Proposal-Network"><a href="#Region-Proposal-Network" class="headerlink" title="Region Proposal Network"></a>Region Proposal Network</h4><p>Firstly, the Region proposal network (RPN) uses a anchor system shown in Fig below , it sets 9 anchors for each position at the W*H feature map came from CNN, each anchor is a rectangle with scales in {8, 16, 32} and aspect ratios in {0.5, 1, 2}. RPN sets two branches, one for classification and the other for anchor refinement.</p>
-<img src="/img/loader.gif" data-original="/2019/08/24/object-detection-part1/RPN.jpg" alt="RPN" title="RPN">
+<img src="/img/loader.gif" data-original="/dinghow-blog/2019/08/24/object-detection-part1/RPN.jpg" alt="RPN" title="RPN">
 <p>At firest, RPN do 3∗3 convolution to integrate regional features, for the classification branch, uses 1 ∗ 1 ∗ 18 convolution kernel to reduce the input dimension to (W, H, 18), then reshape it to (2,9∗W ∗H), it’s easy to know that 9∗W ∗H is anchors for each position, and 2 is the class with or without object. Then, RPN uses softmax for classification, and reshape them back to (W, H, 18) for region output. For the anchor refinement branch, uses 1 ∗ 1 ∗ 36 convolution to reduce dimension to (W, H, 4 ∗ 9), obviously it means four box parameters for 9 anchors at each position, it’s same as B-Box refinement model in R-CNN and Fast R-CNN, uses linear regression.</p>
 <h4 id="Training"><a href="#Training" class="headerlink" title="Training"></a>Training</h4><ol>
 <li>Train the RPN network using the model already trained on ImageNet.</li>
@@ -267,15 +267,15 @@ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
 <li>Fine tune Fast R-CNN.</li>
 </ol>
 <h3 id="3-5-You-Only-Look-Once-YOLO"><a href="#3-5-You-Only-Look-Once-YOLO" class="headerlink" title="3.5 You Only Look Once (YOLO)"></a>3.5 You Only Look Once (YOLO)</h3><p>You only look once (YOLO)[9] proposed a one-stage model for object detection task, it frames object detection as a regression problem to spatially separated B-Box and associated class probabilities.</p>
-<img src="/img/loader.gif" data-original="/2019/08/24/object-detection-part1/yolo1.jpg" alt="yolo1" title="yolo1">
+<img src="/img/loader.gif" data-original="/dinghow-blog/2019/08/24/object-detection-part1/yolo1.jpg" alt="yolo1" title="yolo1">
 <h4 id="Anchor-System"><a href="#Anchor-System" class="headerlink" title="Anchor System"></a>Anchor System</h4><p>YOLO uses a CNN structure based on GoogLeNet, and it sets an anchor system for detection and classification. As the convolution operation can be thought as sliding windows, the CNN output can be corresponded with input image spatially, suppose the CNN divided the image into S*S grids, YOLO detects objects use the center grid, and the box size is a property for regression. The classification and detection probabilities:</p>
 <p>$$Pr(class_i|object)*Pr(object)*IOU^{truth}_{pred} = Pr(class_i)*IOU^{truth}_{pred}$$</p>
 <p>Where $Pr(object)$ is the probability for object in this windows, $Pr(class_i|object)$ is the class probability taking existing objects as a prior, and IOU is the metric for B-Box predicted.<br>$$<br>IOU(A,B) = \frac{|A\cap B|}{|A\cup B|}<br>$$</p>
 <h4 id="Multi-task-Loss"><a href="#Multi-task-Loss" class="headerlink" title="Multi-task Loss"></a>Multi-task Loss</h4><p>The output of YOLO is a 7∗7∗30 tensor, 7∗7 is the grid size, and 30 is the combination of probabilities, 20 dimensions for classification $Pr(class_i|object)$, 2 dimensions for object existing $Pr(object)$, and 8 dimensions (2 ∗ x, y, w, h) for B-Box.</p>
-<img src="/img/loader.gif" data-original="/2019/08/24/object-detection-part1/yolo2.jpg" alt="yolo2" title="yolo2">
+<img src="/img/loader.gif" data-original="/dinghow-blog/2019/08/24/object-detection-part1/yolo2.jpg" alt="yolo2" title="yolo2">
 <p>$$L_{yolo} = \lambda_{coord}\sum_{i=0}^{S^2}\sum_{j=0}^B1_{ij}^{obj}[(x_i-\overline{x}_i)^2+(y_i-\overline{y}_i)^2]+\\<br>\lambda_{coord}\sum_{i=0}^{S^2}\sum_{j=0}^B1_{ij}^{obj}[(\sqrt{w_i}-\sqrt{\overline{w}_i})^2+(\sqrt{h_i}-\sqrt{\overline{h}_i})^2]+\\<br>\sum_{i=0}^{S^2}\sum_{j=0}^B1_{ij}^{obj}(C_i-\overline{C}_i)^2+\\<br>\lambda_{noobj}\sum_{i=0}^{S^2}\sum_{j=0}^B1_{ij}^{noobj}(C_i-\overline{C}_i)^2+\\<br>\sum_{i=0}^{S^2}1_{ij}^{obj}\sum_{c\in classes}(p_i(c)-\overline{p}_i(c))^2$$</p>
 <p>Where $S*S$ is the grid size, $B$ is the number of boxes for each grid, $1_{ij}^{obj}$ means the $(i,j)$ grid exists objects, $C_i$ is the confidence for existing objects, and $p_i$ is the probability for each classes.</p>
-<h3 id="3-6-Comparison"><a href="#3-6-Comparison" class="headerlink" title="3.6 Comparison"></a>3.6 Comparison</h3><img src="/img/loader.gif" data-original="/2019/08/24/object-detection-part1/comparsion.jpg" alt="compar" title="compar">
+<h3 id="3-6-Comparison"><a href="#3-6-Comparison" class="headerlink" title="3.6 Comparison"></a>3.6 Comparison</h3><img src="/img/loader.gif" data-original="/dinghow-blog/2019/08/24/object-detection-part1/comparsion.jpg" alt="compar" title="compar">
 <h2 id="4-References"><a href="#4-References" class="headerlink" title="4. References"></a>4. References</h2><p>[2]  Object detection. <a href="https://en.wikipedia.org/wiki/Object_detection" target="_blank" rel="external">https://en.wikipedia.org/wiki/Object_detection</a>. Accessed: 2019-08-24.</p>
 <p>[3]  Yolo. <a href="https://github.com/pjreddie/darknet" target="_blank" rel="external">https://github.com/pjreddie/darknet</a>. Accessed: 2019-08-24.</p>
 <p>[4]  Ross Girshick. Fast R-CNN. ICCV, 2015.</p>
@@ -294,14 +294,14 @@ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
 		<ul class="am-pagination">
     
     	<li class="am-pagination-prev">
-   		<a class="pull-left" href="/2019/09/23/MIT-18-dot-06/" title="MIT18.06线性代数笔记">
+   		<a class="pull-left" href="/dinghow-blog/2019/09/23/MIT-18-dot-06/" title="MIT18.06线性代数笔记">
       		&laquo; Pre post
 		</a>
 		</li>
 	
 	
 		<li class="am-pagination-next">
-		<a class="pull-right" href="/2019/07/19/For-KyoAni/" title="祈福京阿尼">
+		<a class="pull-right" href="/dinghow-blog/2019/07/19/For-KyoAni/" title="祈福京阿尼">
 			Next post &raquo;
 		</a>
 		</li>
@@ -328,7 +328,7 @@ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
 
 <!-- gitalk`s css & js -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<link rel="stylesheet" href="/css/comment.css">
+<link rel="stylesheet" href="/dinghow-blog/css/comment.css">
 <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.2/dist/gitalk.min.js"></script>
 
@@ -478,7 +478,7 @@ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
 		<!-- <script src="http://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script> -->
 
 <script>
-	window.jQuery || document.write('<script src="/js/jquery-2.1.1.min.js"><\/script>')
+	window.jQuery || document.write('<script src="/dinghow-blog/js/jquery-2.1.1.min.js"><\/script>')
 </script>
 
 <style>
@@ -506,7 +506,7 @@ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
 </style>
 
 
-	<script src="/js/motto.js"></script>
+	<script src="/dinghow-blog/js/motto.js"></script>
 	<script type="text/javascript">
 		$(".motto").html(getMingYanContent());
 	</script>	
@@ -533,7 +533,7 @@ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
     </div>
 </div>
 
-<script src="/js/ziploader.js"></script>
+<script src="/dinghow-blog/js/ziploader.js"></script>
 
 
   <script type="text/javascript">
@@ -566,7 +566,7 @@ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
     }
 
     // get search zip version
-    $.get('/searchVersion.txt?t=' + (+new Date()), function(res) {
+    $.get('/dinghow-blog/searchVersion.txt?t=' + (+new Date()), function(res) {
       if (localStorage.getItem('searchVersion') !== res) {
         localStorage.setItem('searchVersion', res);
         initSearchJson();
@@ -574,7 +574,7 @@ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
     });
 
     function initSearchJson () {
-      initLoad(['/search.zip'], {
+      initLoad(['/dinghow-blog/search.zip'], {
         loadOptions: {
           success: function(obj) {
             localStorage.setItem('searchJson', obj['search.json'])
@@ -852,10 +852,10 @@ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
 
 
 
-	<script type="text/javascript" src="/js/toc.js"></script>
+	<script type="text/javascript" src="/dinghow-blog/js/toc.js"></script>
 
 
-<script type="text/javascript" src="/js/main.js"></script>
+<script type="text/javascript" src="/dinghow-blog/js/main.js"></script>
 
 <script type="text/javascript">
 	//generate a random img that pre_name 'from 0 to 110'
