@@ -44,7 +44,7 @@
 	<header id="header-bg-1" style="background-image: url( /dinghow-blog/ );">	
 
 	
-		<div id="cd-logo"><a href="/dinghow-blog/"><img src="/img/loader.gif" data-original="/dinghow-blog/imgs/logo.png" alt="Logo"></a></div>
+		<div id="cd-logo"><a href="/dinghow-blog/"><img src="/dinghow-blog/img/loader.gif" data-original="/dinghow-blog/imgs/logo.png" alt="Logo"></a></div>
 	
 	
 	<!-- motto or description -->
@@ -226,7 +226,7 @@ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
 <ol>
 <li>Develop a virtual parking-slot image generation system using Unity. Taking a real road image as the texture. Then, feed the texture into Unity. Your system is expected to create various parking-slot image samples by adjusting the lighting conditions, the trees, the objects nearby, and the  parking-lines.</li>
 </ol>
-<p><img src="/img/loader.gif" data-original="https://raw.githubusercontent.com/Dinghow/Parking-Slot_Image_Generator/master/img/virtualps.png" alt="img"></p>
+<p><img src="/dinghow-blog/img/loader.gif" data-original="https://raw.githubusercontent.com/Dinghow/Parking-Slot_Image_Generator/master/img/virtualps.png" alt="img"></p>
 <p>　</p>
 <ol>
 <li>Virtual image samples may be not as real as samples collected from the real world. So, you need to use GAN-based domain adaptation technologies to improve their reality. You may try the following suggested candidate solutions: 1) Learning from simulated and unsupervised images through adversarial training, CVPR 2017; 2) Unsupervised pixel-level domain adaptation with generative adversarial networks, CVPR 2017; 3) Diverse image-to-image translation via disentangled representations, ECCV 2018. To train GAN-based pixel-level domain adaptation networks, you may need to use real parking-slot image samples, which can be obtained here <a href="https://cslinzhang.github.io/deepps/" target="_blank" rel="external">https://cslinzhang.github.io/deepps/</a>.</li>
@@ -246,8 +246,8 @@ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
 <li>Ground texture: cement floor, masonry ground, shallow lawn, mooring road surface, etc.</li>
 </ol>
 <p>We mainly set up the following scenarios.</p>
-<img src="/img/loader.gif" data-original="/dinghow-blog/2019/06/17/Parking-slot-Image-Generator/mix_img.png" alt="img1" title="img1">
-<h2 id="2-2-Domain-adapation"><a href="#2-2-Domain-adapation" class="headerlink" title="2.2 Domain adapation"></a>2.2 Domain adapation</h2><h3 id="CycleGAN-1"><a href="#CycleGAN-1" class="headerlink" title="CycleGAN[^1]"></a>CycleGAN[^1]</h3><img src="/img/loader.gif" data-original="/dinghow-blog/2019/06/17/Parking-slot-Image-Generator/CycleGAN-1.png" alt="img2" title="img2">
+<img src="/dinghow-blog/img/loader.gif" data-original="/dinghow-blog/2019/06/17/Parking-slot-Image-Generator/mix_img.png" alt="img1" title="img1">
+<h2 id="2-2-Domain-adapation"><a href="#2-2-Domain-adapation" class="headerlink" title="2.2 Domain adapation"></a>2.2 Domain adapation</h2><h3 id="CycleGAN-1"><a href="#CycleGAN-1" class="headerlink" title="CycleGAN[^1]"></a>CycleGAN[^1]</h3><img src="/dinghow-blog/img/loader.gif" data-original="/dinghow-blog/2019/06/17/Parking-slot-Image-Generator/CycleGAN-1.png" alt="img2" title="img2">
 <p>CycleGAN is a creative network to solve the unpaired pix2pix domain adapation problem.</p>
 <p>The innovation of CycleGAN is that it enables this migration between the source and target domains without the need for one-to-one mapping between training data.</p>
 <p>The main part is Cycle-consistency loss:</p>
@@ -259,9 +259,9 @@ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
 <li>Returne the generated image in target domain to the source domain,  get the generated image, thus eliminating the requirement of image pairing in the target domain. </li>
 </ul>
 <p>Using the generator network to map the image to the target domain, and by matching the generator and discriminator, the quality of the generated image can be improved.</p>
-<h3 id="CyCADA-2"><a href="#CyCADA-2" class="headerlink" title="CyCADA[^2]"></a>CyCADA[^2]</h3><img src="/img/loader.gif" data-original="/dinghow-blog/2019/06/17/Parking-slot-Image-Generator/CyCADA-1.png" alt="img3" title="img3">
+<h3 id="CyCADA-2"><a href="#CyCADA-2" class="headerlink" title="CyCADA[^2]"></a>CyCADA[^2]</h3><img src="/dinghow-blog/img/loader.gif" data-original="/dinghow-blog/2019/06/17/Parking-slot-Image-Generator/CyCADA-1.png" alt="img3" title="img3">
 <p>CyCADA is a new network structure based on CycleGAN, which adapts representations at both the pixel-level and feature-level. By adding feature loss &amp; semantic loss, CyCADA can perform better on domain adaptation problem, especially on the dataset with semantic information. And the experiment designed by the authors is a transform from GTA game screenshots to real scene, similar to our project.</p>
-<img src="/img/loader.gif" data-original="/dinghow-blog/2019/06/17/Parking-slot-Image-Generator/CyCADA-2.png" alt="img4" title="img4">
+<img src="/dinghow-blog/img/loader.gif" data-original="/dinghow-blog/2019/06/17/Parking-slot-Image-Generator/CyCADA-2.png" alt="img4" title="img4">
 <h3 id="Our-network"><a href="#Our-network" class="headerlink" title="Our network"></a>Our network</h3><p>Since our dataset doesn’t have the semantic information, so I just add feature loss to CycleGAN, use resnet as the encoder to extract feature map. Then Compare the features from A domain and regenerated B domain images, I set the initial feature loss weight as 0.2, you can change that to adjust the influence by feature loss. <code>--feature_loss_weight</code></p>
 <pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># module.py</span>
 <span class="token keyword">def</span> <span class="token function">ResnetEncoder</span><span class="token punctuation">(</span>input_shape<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">256</span><span class="token punctuation">,</span> <span class="token number">256</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
@@ -334,9 +334,9 @@ G_A_B_Feature_loss <span class="token operator">=</span> identity_loss_fn<span c
 G_loss <span class="token operator">=</span> <span class="token punctuation">(</span>A2B_g_loss <span class="token operator">+</span> B2A_g_loss<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token punctuation">(</span>A2B2A_cycle_loss <span class="token operator">+</span> B2A2B_cycle_loss<span class="token punctuation">)</span> <span class="token operator">*</span> args<span class="token punctuation">.</span>cycle_loss_weight <span class="token operator">+</span> <span class="token punctuation">(</span>A2B_id_loss <span class="token operator">+</span> B2A_id_loss<span class="token punctuation">)</span> <span class="token operator">*</span> args<span class="token punctuation">.</span>identity_loss_weight <span class="token operator">+</span> G_A_B_Feature_loss<span class="token operator">*</span>args<span class="token punctuation">.</span>feature_loss_weight
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><strong>Result</strong></p>
-<img src="/img/loader.gif" data-original="/dinghow-blog/2019/06/17/Parking-slot-Image-Generator/result.png" alt="img5" title="img5">
+<img src="/dinghow-blog/img/loader.gif" data-original="/dinghow-blog/2019/06/17/Parking-slot-Image-Generator/result.png" alt="img5" title="img5">
 <h1 id="4-Additional"><a href="#4-Additional" class="headerlink" title="4. Additional"></a>4. Additional</h1><p>Maybe using the real material patches for GTA5 can solve this problem in a totally different way :)</p>
-<img src="/img/loader.gif" data-original="/dinghow-blog/2019/06/17/Parking-slot-Image-Generator/GTA.jpg" alt="img6" title="img6">
+<img src="/dinghow-blog/img/loader.gif" data-original="/dinghow-blog/2019/06/17/Parking-slot-Image-Generator/GTA.jpg" alt="img6" title="img6">
 <h1 id="5-References"><a href="#5-References" class="headerlink" title="5. References"></a>5. References</h1><h3 id="CycleGAN"><a href="#CycleGAN" class="headerlink" title="CycleGAN"></a>CycleGAN</h3><h4 id="Paper"><a href="#Paper" class="headerlink" title="Paper:"></a>Paper:</h4><p>[^1]: J. Zhu, et al, <em><a href="https://arxiv.org/abs/1703.10593" target="_blank" rel="external">Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks</a></em>, 2017 International Conference on Computer Vision (ICCV 2017), IEEE, 2017.</p>
 <h4 id="Codes"><a href="#Codes" class="headerlink" title="Codes:"></a>Codes:</h4><p><a href="https://github.com/LynnHo/CycleGAN-Tensorflow-2" target="_blank" rel="external">https://github.com/LynnHo/CycleGAN-Tensorflow-2</a></p>
 <h3 id="CyCADA"><a href="#CyCADA" class="headerlink" title="CyCADA:"></a>CyCADA:</h3><h4 id="Paper-1"><a href="#Paper-1" class="headerlink" title="Paper:"></a>Paper:</h4><p>[^2]: J. Hoffman, et al, <em><a href="https://arxiv.org/abs/1703.10593" target="_blank" rel="external">CyCADA: Cycle Consistent Adversarial Domain Adaptation</a></em>, 2018 International Conference on Machine Learning (ICML 2018), IEEE, 2018.</p>
